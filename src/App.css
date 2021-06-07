@@ -11,16 +11,31 @@
 }
 
 .App-header {
+}
+
+.main {
   border: 13px solid #0046be;
   font-family: "Ubuntu", sans-serif;
   padding-top: 45px;
-  padding-left: 2px;
+  padding-bottom: 45px;
+  padding-left: 20px;
   text-transform: lowercase;
-}
-h1 {
-  font-size: 82px;
-  font-weight: 700;
-  color: #0046be;
-  line-height: 1.2;
   text-align: left;
+}
+.main{
+  padding-top: 30px;
+}
+.input {
+
+  height: 51px;
+  padding: 0 47px 0 15px;
+  margin: 0;
+  border: 6px solid #0e5ab6;
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 16px;
+  color: #767676;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
