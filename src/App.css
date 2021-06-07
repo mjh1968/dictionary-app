@@ -1,39 +1,26 @@
 .App {
   text-align: center;
   font-family: "Ubuntu", sans-serif;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  width: 100%;
+  max-width: 840px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: block;
+  margin: 0 auto;
+  padding: 25px;
 }
 
 .App-header {
+  border: 13px solid #0046be;
   font-family: "Ubuntu", sans-serif;
-
-  font-size: 36px;
-  line-height: 44px;
-
-  color: #727d86;
+  padding-top: 45px;
+  padding-left: 2px;
+  text-transform: lowercase;
 }
 h1 {
-  text-align: center;
-}
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 82px;
+  font-weight: 700;
+  color: #0046be;
+  line-height: 1.2;
+  text-align: left;
 }
