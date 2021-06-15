@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Dictionary() {
+  let [word, setWord] = useState(null);
+  function search(event) {
+    event.preventDefault();
+    return null;
+  }
   return (
     <div className="Dictionary">
-      <form>
-        <input type="search" className="input"></input>
+      <form onSubmit={search}>
+        <input type="search" className="input">
+          {" "}
+        </input>
       </form>
     </div>
   );
