@@ -22,20 +22,14 @@
   text-transform: lowercase;
   text-align: left;
 }
-.main{
+.main {
   padding-top: 30px;
 }
 .input {
-
-  height: 51px;
-  padding: 0 47px 0 15px;
-  margin: 0;
-  border: 6px solid #0e5ab6;
-  box-shadow: none;
-  border-radius: 0;
-  font-size: 16px;
-  color: #767676;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 3px;
+  color: #F2F2F2;
+  font-size: 18px;
 }
