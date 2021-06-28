@@ -4,17 +4,19 @@ h1 {
   color: #0046be;
   line-height: 1.2;
 }
-input.input_form {
-  width: 98%;
-  height: 46px;
-  border: solid 1px;
-  border-radius: 3px;
-  color: #e3e5e925;
-  font-size: 18px;
+.searchForm {
+  padding-top: 20px;
 }
 
-input.input_form:focus {
-  border: none #e3e5e9;
+input[type="text"] {
+  width: 98%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid lightslategrey;
+  outline: none;
+}
 
-  background-color: #e3e5e9;
+input[type="text"]:focus {
+  background-color: lightblue;
 }

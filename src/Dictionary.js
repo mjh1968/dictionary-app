@@ -10,8 +10,11 @@ export default function Dictionary() {
   }
   return (
     <div className="dictionary">
-      <form onSubmit={search}>
-        <input type="search" className="input_form"></input>
+      <form className="searchForm">
+        <input type="text" id="fname" name="fname"></input>
+        {/* <label class="form-label" for="form1">
+          Search
+        </label> */}
       </form>
     </div>
   );
