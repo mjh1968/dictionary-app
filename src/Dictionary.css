@@ -24,6 +24,3 @@ input[type="text"] {
   font-size: 25px;
 }
 
-input[type="text"]:focus {
-  /* background-color: lightblue; */
-}
