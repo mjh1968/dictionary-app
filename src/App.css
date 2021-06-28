@@ -11,7 +11,7 @@
 }
 
 .main {
-  border: 13px solid #0046be;
+  border: 13px solid #4B97DD;
   font-family: "Ubuntu", sans-serif;
   padding-top: 45px;
   padding-bottom: 45px;
@@ -22,11 +22,4 @@
 .main {
   padding-top: 30px;
 }
-.input {
-  width: 100%;
-  height: 46px;
-  border: none;
-  border-radius: 3px;
-  color: #f2f2f2;
-  font-size: 18px;
-}
+

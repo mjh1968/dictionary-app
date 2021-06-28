@@ -4,3 +4,17 @@ h1 {
   color: #0046be;
   line-height: 1.2;
 }
+input.input_form {
+  width: 98%;
+  height: 46px;
+  border: solid 1px;
+  border-radius: 3px;
+  color: #e3e5e925;
+  font-size: 18px;
+}
+
+input.input_form:focus {
+  border: none #e3e5e9;
+
+  background-color: #e3e5e9;
+}

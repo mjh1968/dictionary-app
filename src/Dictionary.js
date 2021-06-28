@@ -9,9 +9,9 @@ export default function Dictionary() {
     return alert("ola");
   }
   return (
-    <div className="Dictionary">
+    <div className="dictionary">
       <form onSubmit={search}>
-        <input type="search" className="input"></input>
+        <input type="search" className="input_form"></input>
       </form>
     </div>
   );
