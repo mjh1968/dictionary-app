@@ -6,12 +6,16 @@ export default function Dictionary() {
 
   function search(event) {
     event.preventDefault();
-    return alert("ola");
+    return alert(`searchig for  ${word}`);
   }
+  function WordSearch(event) {
+    setWord(event.target.value);
+  }
+
   return (
     <div className="dictionary">
-      <form className="searchForm">
-        <input type="text" id="fname" name="fname"></input>
+      <form className="searchForm" onSubmit={search}>
+        <input type="text" onChange={WordSearch}></input>
         {/* <label class="form-label" for="form1">
           Search
         </label> */}

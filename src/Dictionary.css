@@ -1,3 +1,7 @@
+.dictionary {
+  font-family: "Ubuntu", sans-serif;
+}
+
 h1 {
   font-size: 82px;
   font-weight: 700;
@@ -15,8 +19,11 @@ input[type="text"] {
   box-sizing: border-box;
   border: 1px solid lightslategrey;
   outline: none;
+  font-family: "Ubuntu", sans-serif;
+  color: lightslategray;
+  font-size: 25px;
 }
 
 input[type="text"]:focus {
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
