@@ -12,7 +12,7 @@ h1 {
   padding-top: 20px;
 }
 
-input[type="text"] {
+input {
   width: 98%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -20,7 +20,7 @@ input[type="text"] {
   border: 1px solid lightslategrey;
   outline: none;
   font-family: "Ubuntu", sans-serif;
-  color: lightslategray;
+  color: rgb(58,56,56);
   font-size: 25px;
 }
 
