@@ -1,4 +1,6 @@
 .dateFormatted {
-  font-size: 20px;
+  font-size: 15px;
   color: black;
+  text-align: right;
+  margin-right: 10px;
 }
