@@ -1,15 +1,6 @@
 .dictionary {
   font-family: "Ubuntu", sans-serif;
-}
-
-h1 {
-  font-size: 82px;
-  font-weight: 700;
-  color: #0046be;
-  line-height: 1.2;
-}
-.searchForm {
-  padding-top: 20px;
+  margin-top: 50px;
 }
 
 input {
@@ -20,7 +11,6 @@ input {
   border: 1px solid lightslategrey;
   outline: none;
   font-family: "Ubuntu", sans-serif;
-  color: rgb(58,56,56);
+  color: rgb(75, 151, 221);
   font-size: 25px;
 }
-
