@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
-
+import Photos from "./Photos";
 
 export default function Results(props) {
   console.log(props.results);
+  const [photos, setPhotos] = useState([]);
+
+  function handleImages(response) {
+    setPhotos(response.data.photos);
+  }
+
   if (props.results) {
     return (
       <div className="showResults">
@@ -19,6 +25,7 @@ export default function Results(props) {
             </div>
           );
         })}
+        <Photos photos={photos} />
       </div>
     );
   } else {
