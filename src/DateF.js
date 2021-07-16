@@ -33,7 +33,7 @@ export default function DateF() {
   let monthName = months[myCurrentDate.getMonth()];
   return (
     <div className="dateFormatted">
-      <span class="text-lowercase">{day}</span>, {date} {monthName} {year}
+      <span className="text-lowercase">{day}</span>, {date} {monthName} {year}
     </div>
   );
 }
