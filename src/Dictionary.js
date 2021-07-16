@@ -25,7 +25,7 @@ export default function Dictionary() {
   return (
     <div className="dictionary">
       <div className="Search">
-        <h1>What word do you want to look up?</h1>
+        <h2>What word do you want to look up?</h2>
         <form className="searchForm" onSubmit={search}>
           <input type="text" onChange={WordSearch}></input>
         </form>

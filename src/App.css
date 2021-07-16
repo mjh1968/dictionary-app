@@ -11,12 +11,12 @@
 }
 
 .main {
-  border: 13px solid #4b97dd;
+  /* border: 13px solid #4b97dd; */
   font-family: "Ubuntu", sans-serif;
   padding-top: 45px;
   padding-bottom: 45px;
   padding-left: 20px;
-  text-transform: lowercase;
+  
   text-align: left;
 }
 .main {
@@ -24,6 +24,7 @@
 }
 
 h1 {
-  font-size: 25px;
-  color: rgb(147, 141, 141);
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #212529;
 }
