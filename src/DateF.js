@@ -4,7 +4,7 @@ import "./DateF.css";
 export default function DateF() {
   let myCurrentDate = new Date();
   let date = myCurrentDate.getDate();
-  let month = myCurrentDate.getMonth() + 1;
+
   let year = myCurrentDate.getFullYear();
   let days = [
     "Sunday",
