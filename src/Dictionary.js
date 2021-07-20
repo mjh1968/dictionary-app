@@ -10,12 +10,24 @@ export default function Dictionary() {
   function handleSearch(response) {
     setResults(response.data[0]);
   }
-
+  function handleSearchPhotos(response) {
+    alert(`searchig for`);
+    console.log(response);
+  }
   function search(event) {
     event.preventDefault();
-    // return alert(`searchig for  ${word}`);
+
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`;
     axios.get(apiUrl).then(handleSearch);
+    let apiPhotosKey =
+      "563492ad6f91700001000001f49cfa17380f4f3aa1ad13b578bb56ca";
+
+    let apiUrlPhotos = `https://api.pexels.com/v1/search?query=${word}`;
+    axios
+      .get(apiUrlPhotos, {
+        headers: { Authorization: `Bearer ${apiPhotosKey}` },
+      })
+      .then(handleSearchPhotos);
   }
   function WordSearch(event) {
     setWord(event.target.value);
