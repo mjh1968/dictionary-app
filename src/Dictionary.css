@@ -8,16 +8,14 @@ input {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 1px solid lightslategrey;
+  border: 0px solid lightslategrey;
   outline: none;
   font-family: "Ubuntu", sans-serif;
-  color: #212529;
+  color: green;
   font-size: 30px;
 }
 
 .Search {
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  border-radius: 8px;
   background: white;
 
   margin-top: 10px;

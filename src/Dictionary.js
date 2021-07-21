@@ -2,26 +2,22 @@ import React, { useState } from "react";
 import "./Dictionary.css";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 
-export default function Dictionary() {
-  let [word, setWord] = useState(null);
+export default function Dictionary(props) {
+  let [word, setWord] = useState(props.defaultword);
   let [results, setResults] = useState(null);
+  let [photos, setPhotos] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
-  function handleSearch(response) {
-    setResults(response.data[0]);
-  }
-  function handleSearchPhotos(response) {
-    alert(`searchig for`);
-    console.log(response);
-  }
-  function search(event) {
+  function handleSearch(event) {
     event.preventDefault();
-
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`;
-    axios.get(apiUrl).then(handleSearch);
+    search();
+  }
+  function handleSearchMeanings(response) {
+    setResults(response.data[0]);
     let apiPhotosKey =
       "563492ad6f91700001000001f49cfa17380f4f3aa1ad13b578bb56ca";
-
     let apiUrlPhotos = `https://api.pexels.com/v1/search?query=${word}`;
     axios
       .get(apiUrlPhotos, {
@@ -29,19 +25,45 @@ export default function Dictionary() {
       })
       .then(handleSearchPhotos);
   }
-  function WordSearch(event) {
-    setWord(event.target.value);
+
+  function handleSearchPhotos(response) {
+    setPhotos(response.data.photos);
+    console.log(response);
   }
 
-  return (
-    <div className="dictionary">
-      <div className="Search">
-        <h2>What word do you want to look up?</h2>
-        <form className="searchForm" onSubmit={search}>
-          <input type="text" onChange={WordSearch}></input>
-        </form>
+  function search() {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`;
+    axios.get(apiUrl).then(handleSearchMeanings);
+  }
+
+  function handleWordChange(event) {
+    setWord(event.target.value);
+  }
+  function load() {
+    setLoaded(true);
+    search();
+  }
+
+  if (loaded) {
+    return (
+      <div className="dictionary">
+        <div className="Search">
+          <h2>What word do you want to look up?</h2>
+          <form onSubmit={handleSearch} className="searchForm">
+            <input
+              type="text"
+              autoFocus={true}
+              defaultValue={props.defaultword}
+              onChange={handleWordChange}
+            ></input>
+          </form>
+        </div>
+        <Results results={results} />
+        <Photos photos={photos} />
       </div>
-      <Results results={results} />
-    </div>
-  );
+    );
+  } else {
+    load();
+    return "Loading!";
+  }
 }
